@@ -1,5 +1,10 @@
 {
-    "name": "App",
+    "name": "Minha Loja",
+    "short_name": "Loja",
+    "lang": "pt-BR",
+    "start_url": "/ramonchiara/SinglePageApplicationPwa/public_html/index.html",
+    "display": "standalone",
+    "theme_color": "#ededed",
     "icons": [
         {
             "src": "icons\/android-icon-36x36.png",
