@@ -25,9 +25,9 @@ toolbox.router.get('js/loja.js', toolbox.cacheFirst);
 toolbox.router.get('produtos.json', toolbox.cacheFirst);
 toolbox.router.get('views/*', toolbox.cacheFirst);
 
-toolbox.router.get('/100/100/abstract/*/', function (request, values, options) {
+toolbox.router.get('/100/100/abstract/*', function (request, values, options) {
     return toolbox.cacheFirst(request, values, options).catch(function (error) {
-        return new Request('images/no-image.png');
+        return toolbox.cacheOnly(new Request('images/no-image.png'), values, options);
     });
 }, {
     origin: 'http://lorempixel.com'
