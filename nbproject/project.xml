@@ -5,5 +5,11 @@
         <data xmlns="http://www.netbeans.org/ns/clientside-project/1">
             <name>SinglePageApplicationPwa</name>
         </data>
+        <libraries xmlns="http://www.netbeans.org/ns/cdnjs-libraries/1">
+            <library name="sw-toolbox" version="3.6.1">
+                <file localPath="public_html/js/libs/sw-toolbox/sw-toolbox.js" path="sw-toolbox.js"/>
+                <file localPath="public_html/js/libs/sw-toolbox/sw-toolbox.js.map" path="sw-toolbox.js.map"/>
+            </library>
+        </libraries>
     </configuration>
 </project>
