@@ -15,7 +15,8 @@ toolbox.precache([
     'js/loja.js',
     'produtos.json',
     'views/principal.html',
-    'views/produto.html'
+    'views/produto.html',
+    'images/no-image.png'
 ]);
 
 toolbox.router.get('index.html', toolbox.cacheFirst);
@@ -24,7 +25,11 @@ toolbox.router.get('js/loja.js', toolbox.cacheFirst);
 toolbox.router.get('produtos.json', toolbox.cacheFirst);
 toolbox.router.get('views/*', toolbox.cacheFirst);
 
-toolbox.router.get('/100/100/abstract/*/', toolbox.cacheFirst, {
+toolbox.router.get('/100/100/abstract/*/', function (request, values, options) {
+    return toolbox.cacheFirst(request, values, options).catch(function (error) {
+        return new Request('images/no-image.png');
+    });
+}, {
     origin: 'http://lorempixel.com'
 });
 
