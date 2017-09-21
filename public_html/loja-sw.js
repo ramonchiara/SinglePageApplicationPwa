@@ -13,7 +13,6 @@ toolbox.precache([
     'js/libs/angular.js/angular.js',
     'js/libs/angular.js/angular-route.js',
     'js/loja.js',
-    'loja-sw.js',
     'produtos.json',
     'views/principal.html',
     'views/produto.html',
@@ -22,8 +21,7 @@ toolbox.precache([
 
 toolbox.router.get('index.html', toolbox.cacheFirst);
 toolbox.router.get('js/libs/*', toolbox.networkFirst);
-toolbox.router.get('js/loja.js', toolbox.networkFirst);
-toolbox.router.get('loja-sw.js', toolbox.networkFirst);
+toolbox.router.get('js/loja.js', toolbox.cacheFirst);
 toolbox.router.get('produtos.json', toolbox.cacheFirst);
 toolbox.router.get('views/*', toolbox.cacheFirst);
 
