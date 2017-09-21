@@ -26,7 +26,7 @@ toolbox.router.get('produtos.json', toolbox.cacheFirst);
 toolbox.router.get('views/*', toolbox.cacheFirst);
 
 toolbox.router.get('/100/100/abstract/*', function (request, values, options) {
-    return toolbox.cacheFirst(request, values, options).catch(function (error) {
+    return toolbox.networkFirst(request, values, options).catch(function (error) {
         return toolbox.cacheOnly(new Request('images/no-image.png'), values, options);
     });
 }, {
